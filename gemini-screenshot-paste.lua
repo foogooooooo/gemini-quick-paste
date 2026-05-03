@@ -9,7 +9,7 @@ local TIMEOUT_SECONDS   = 30          -- 超过这么久没截图就放弃
 local MINI_WINDOW_DELAY = 0.5         -- 迷你窗弹出+输入框聚焦的等待时间
 local POST_SHOT_DELAY   = 0.1         -- 截图完成后稍等一下再唤起 Gemini
 
-hs.hotkey.bind({"alt", "shift"}, "g", function()
+hs.hotkey.bind({"alt", "shift"}, "a", function()
   local startCount = hs.pasteboard.changeCount()
 
   -- 1. 触发系统区域截图到剪贴板
@@ -42,4 +42,4 @@ hs.hotkey.bind({"alt", "shift"}, "g", function()
   end)
 end)
 
-hs.alert.show("Gemini 截图粘贴已加载 (Option+Shift+G)")
+hs.alert.show("Gemini 截图粘贴已加载 (Option+Shift+A)")
