@@ -30,10 +30,8 @@ hs.hotkey.bind({"alt", "shift"}, "g", function()
           hs.eventtap.keyStroke(MINI_HOTKEY_MODS, MINI_HOTKEY_KEY, 0)
           -- 4. 等输入框聚焦
           hs.timer.doAfter(MINI_WINDOW_DELAY, function()
-            -- 5. 粘贴截图
+            -- 5. 粘贴截图（图片粘贴后光标已经在下一行，不需要再 Shift+Enter）
             hs.eventtap.keyStroke({"cmd"}, "v", 0)
-            -- 6. 换行（图片下方留空行让你输入问题）
-            hs.eventtap.keyStroke({"shift"}, "return", 0)
           end)
         end)
       end
